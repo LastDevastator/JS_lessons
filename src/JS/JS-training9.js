@@ -1,4 +1,4 @@
-'strict mode'
+
 
 function fib(iter) {
 
@@ -24,7 +24,7 @@ function fib(iter) {
   
   }
 
-  return result
+  return result;
 
 }
 
