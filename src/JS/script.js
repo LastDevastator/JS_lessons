@@ -175,7 +175,7 @@ function showMyDb (hidden) {
   }
 }
 
-showMyDb(personalMovieDB.privat)
+showMyDb(personalMovieDB.privat);
 
 function writeYourGenres() {
   for (let i = 1; i <= 3; i++){
