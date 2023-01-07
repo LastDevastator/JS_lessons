@@ -8,7 +8,7 @@ function reverse(str) {
 
 
   if (typeof (str) != 'string') {
-    console.log('Ошибка')
+    console.log('Ошибка');
   } else {
 
     let initialValue = String(str);
@@ -30,16 +30,21 @@ function reverse(str) {
 const baseCurrencies = ['USD', 'EUR'];
 const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
 
-function availableCurr(arr, missingCurr) {
+function availableCurr(arr, missingCurr) { 
 
+  let str = '';
+  arr.length === 0 ? str = 'Нет доступных валют' : str = 'Доступные валюты:\n';
+
+  for (let i in arr) {
+    
+    arr[i] !== missingCurr ? str += `${arr[i]}\n` : 1
+
+  }
+
+ return str
+  
 }
 
 
 
-
-
-
-
-
-
-// console.log (reverse(someString))
+console.log(availableCurr(true, 'RUB'))
