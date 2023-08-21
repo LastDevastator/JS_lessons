@@ -7,37 +7,40 @@
 //   return objCopy;
 // }
 
-// const numbers = {
+const numbers = {
 
-//   a: 2,
-//   b: 5,
-//   c: {
-//     X: 7,
-//     y: 4
-//   }
-// };
+  a: 2,
+  b: 5,
+  c: {
+    X: 7,
+    y: 4
+  }
+};
 
 // const newNumbers = copy(numbers);
 
 
 // newNumbers.a = 5
+// newNumbers.c.X = 55
 
 // console.log(numbers)
 // console.log(newNumbers)
 
-// const add = {
-//   d: 17,
-//   e:15
-// }
+// -------------------------------------------------
 
-// console.log(Object.assign(numbers, add)) // объединение массивов
+const add = {
+  d: 17,
+  e:15
+}
 
-// const clone = Object.assign({}, add); // one more copy methhod
+console.log(Object.assign(numbers, add)) // объединение массивов
 
-// clone.d = 700;
+const clone = Object.assign({}, add); // one more copy methhod
 
-// console.log(add)
-// console.log(clone)
+clone.d = 700;
+
+console.log(add)
+console.log(clone)
 
 // // copy of arrays
 
@@ -50,30 +53,30 @@
 
 // // Spread operators
 
-const video = ['youtube', 'vimeo'],
-  blogs = ['fb', 'lj'],
-  internet = [...video, ...blogs, 'safary'];
+// const video = ['youtube', 'vimeo'],
+//   blogs = ['fb', 'lj'],
+//   internet = [...video, ...blogs, 'safary'];
 
-console.log(internet)
+// console.log(internet)
 
-function log(a, b, c) {
-  console.log(a);
-  console.log(b);
-  console.log(c);
-}
+// function log(a, b, c) {
+//   console.log(a);
+//   console.log(b);
+//   console.log(c);
+// }
 
-const num = [7, 8, 9];
+// const num = [7, 8, 9];
 
-log(...num);
+// log(...num);
 
-const arr = ['a', 'b', 'b']; // one more copy method
-const nwArr = [...arr];
+// const arr = ['a', 'b', 'b']; // one more copy method
+// const nwArr = [...arr];
 
-const q = {
-  a: 6,
-  b:7
-}
+// const q = {
+//   a: 6,
+//   b:7
+// }
 
-const newq = { ...q };
+// const newq = { ...q };
 
-console.log(newq);
+// console.log(newq);

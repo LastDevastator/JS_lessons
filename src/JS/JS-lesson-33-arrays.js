@@ -1,17 +1,26 @@
-const arr = [1, 2, 34, 50, 6, 78, 88];
+// const arr = [1, 93, 34, 50, 6, 78, 88];
 
-arr.sort // сортирует как строки
+// arr.forEach(function(item,i, arr){
 
-console.log(arr)
+// console.log(`${i}, значение  ${item}, ${arr}`)
 
-arr.sort(compareNum) // скармиливаем мутную колбэк функцию - работает ...
-console.log(arr)
+// });
 
-function compareNum(a, b) {
+
+// console.log(arr)
+// console.log(arr.sort())
+// console.log(arr)
+
+// console.log(arr)
+
+// arr.sort(compareNum) // скармиливаем мутную колбэк функцию - работает ...
+// console.log(arr)
+
+// function compareNum(a, b) {
   
-  return a - b;
+//   return a - b;
 
-}
+// }
 
 
 // console.log(arr);
