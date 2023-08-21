@@ -43,7 +43,9 @@
 
 // const oldArray = ['a', 'b', 'c'];
 
-// const newArray = oldArray.slice();
+// const newArray = oldArray.slice(); // копируем
+
+// newArray[1] = "fuck"
 
 // console.log(oldArray);
 // console.log(newArray);
@@ -64,7 +66,7 @@ function log(a, b, c) {
 
 const num = [7, 8, 9];
 
-log(...num);
+log(...num); // ... спрэд операторразворачивает массив в три аргумента
 
 const arr = ['a', 'b', 'b']; // one more copy method
 const nwArr = [...arr];

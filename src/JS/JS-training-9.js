@@ -28,5 +28,5 @@ function fib(iter) {
 
 }
 
-console.log(fib(5.4));
-console.log(typeof(fib(0)))
+console.log(fib(5));
+console.log(typeof(fib(12)))
