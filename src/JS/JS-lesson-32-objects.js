@@ -28,24 +28,28 @@ for (let key in options) {
        console.log(`Словарь ${[key]} Свойство ${i}, значение ${options[key][i]}`);   
       }
 
+    } else if (typeof (options[key]) === 'function'){
+
+      console.log(`it's function , значение : ${options[key]}`);   
+
     } else {
       
     console.log(`Свойство ${key}, значение ${options[key]}`);
  
-   }
+   } 
 
   
 
 
 }
 
-// console.log(options['colors']['border']);
+// // console.log(options['colors']['border']);
 
-console.log(Object.keys(options));
-console.log(Object.keys(options).length);
-options.makeTest();
+// console.log(Object.keys(options));
+// console.log(Object.keys(options).length);
+// options.makeTest();
 
-// деструктуризация
+// // деструктуризация
 
-const { border, bg } = options.colors;
-console.log(border, bg)
+// const { border, bg } = options.colors;
+// console.log(border, bg)
