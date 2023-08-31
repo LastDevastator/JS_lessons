@@ -4,7 +4,8 @@ const box = document.getElementById('box'),
   btns = document.getElementsByTagName('button'),
   circles = document.getElementsByClassName('circle'),
   hearts = document.querySelectorAll('.heart'),
-  oneHeart = document.querySelector('.heart');
+  oneHeart = document.querySelector('.heart'),
+  wrapper = document.querySelector('.wrapper')
 
 // box.style.backgroundColor = 'black'
 // box.style.width = '500px'
@@ -35,6 +36,22 @@ hearts.forEach(item => {
 })
 
 const div = document.createElement('div'); // добавляем элемент через Джаву
+
 div.classList.add('black')
 
-document.body.append(div)
+//document.body.append(div)
+
+wrapper.append(div);
+//wrapper.prepend(div)
+
+circles[0].before(div)
+circles[0].after(div)
+
+//circles[1].remove();
+
+circles[0].replaceWith(hearts[1])
+
+div.innerHTML = '<h1>Hello</h1>'
+// div.textContent = "bla bla bla"
+
+div.insertAdjacentHTML('beforebegin', '<h1>Hello</h1>' )
