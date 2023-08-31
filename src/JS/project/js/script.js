@@ -15,7 +15,7 @@
 'use strict';
 
 const movieDB = {
-    movies: [
+    movies: ["якудза",
         "Логан",
         "Лига справедливости",
         "Ла-ла лэнд",
@@ -26,7 +26,8 @@ const movieDB = {
 
 const adv = document.querySelectorAll('.promo__adv img'),
       poster = document.querySelector('.promo__bg'),
-      genre = document.querySelector('.promo__genre')
+      genre = document.querySelector('.promo__genre'),
+      movieList = document.querySelector('.promo__interactive-list')
 
 adv.forEach (item => {
 
@@ -35,4 +36,23 @@ adv.forEach (item => {
 })
 
 
-genre.textContent = "bla bla bla"
+genre.textContent = "Dramma blia";
+poster.style.backgroundImage = 'url("img/bg.jpg")';
+
+movieList.innerHTML = "";
+
+movieDB.movies.sort()
+
+console.log(movieDB)
+
+movieDB.movies.forEach((film, i) => {
+
+movieList.innerHTML += `
+
+    <li class = "promo__interactive-item">
+    
+    ${i+1} ${film}
+    
+    </li>`;
+
+})
