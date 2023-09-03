@@ -12,47 +12,72 @@
 
 5) Добавить нумерацию выведенных фильмов */
 
+// -------------------------------------------------------------------
+
 'use strict';
 
-const movieDB = {
-    movies: ["якудза",
-        "Логан",
-        "Лига справедливости",
-        "Ла-ла лэнд",
-        "Одержимость",
-        "Скотт Пилигрим против..."
-    ]
-};
+document.addEventListener('DOMContentLoaded', () => {
 
-const adv = document.querySelectorAll('.promo__adv img'),
-      poster = document.querySelector('.promo__bg'),
-      genre = document.querySelector('.promo__genre'),
-      movieList = document.querySelector('.promo__interactive-list')
+    const movieDB = {
+        movies: ["якудза",
+            "Логан",
+            "Лига справедливости",
+            "Ла-ла лэнд",
+            "Одержимость",
+            "Скотт Пилигрим против..."
+        ]
+    };
 
-adv.forEach (item => {
+    const adv = document.querySelectorAll('.promo__adv img'),
+        poster = document.querySelector('.promo__bg'),
+        genre = document.querySelector('.promo__genre'),
+        movieList = document.querySelector('.promo__interactive-list'),
+        addForm = document.querySelector('form.add'),
+        addInput = addForm.querySelector('.adding__input'),
+        checkbox = addForm.querySelector('[type="checkbox]')
+    
 
-    item.remove()
+    addForm.addEventListener('submit', (event) => {
+        event.preventDefault(); // отменяем дефолтные реакции браузера
 
-})
+        const newFilm = addInput.value;
+        //const favorite = checkbox.checked;
+
+        movieDB.movies.push(newFilm)
+
+    })
+    
+    
+    adv.forEach(item => {
+
+        item.remove()
+
+    })
 
 
-genre.textContent = "Dramma blia";
-poster.style.backgroundImage = 'url("img/bg.jpg")';
+    genre.textContent = "Dramma blia";
+    poster.style.backgroundImage = 'url("img/bg.jpg")';
 
-movieList.innerHTML = "";
+    movieList.innerHTML = "";
 
-movieDB.movies.sort()
+    movieDB.movies.sort()
 
-console.log(movieDB)
+    console.log(movieDB)
 
-movieDB.movies.forEach((film, i) => {
+    movieDB.movies.forEach((film, i) => {
 
-movieList.innerHTML += `
+        movieList.innerHTML += `
 
     <li class = "promo__interactive-item">
     
-    ${i+1} ${film}
+    ${i + 1} ${film}
     
     </li>`;
+
+    })
+
+
+   
+
 
 })
